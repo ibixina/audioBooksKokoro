@@ -195,16 +195,16 @@ def main():
     # Create streamer instance
     streamer = EfficientTTSStreamer(
         lang_code='a',
-        voice='af_bella',
-        buffer_size=3,  # Keep only 3 audio chunks in memory
+        voice='af_nicole', # af_bella, af_nicole
+        buffer_size=2,  # Keep only 2 audio chunks in memory
         samplerate=24000
     )
     
     print("Starting streaming...")
     processing_thread = streamer.start_streaming(
         'pg600.txt', 
-        chunk_size=300,  # Smaller chunks for lower latency
-        save_audio=True  # Set to False to save disk space
+        chunk_size=100,  # Smaller chunks for lower latency
+        save_audio=False# Set to False to save disk space
     )
     
     # Monitor streaming (optional)
