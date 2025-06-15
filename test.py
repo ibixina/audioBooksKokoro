@@ -195,7 +195,7 @@ def main():
     # Create streamer instance
     streamer = EfficientTTSStreamer(
         lang_code='a',
-        voice='af_nicole', # af_bella, af_nicole
+        voice='af_bella', # af_bella, af_nicole, af_heart
         buffer_size=2,  # Keep only 2 audio chunks in memory
         samplerate=24000
     )
